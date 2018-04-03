@@ -1,0 +1,36 @@
+---
+- name: Check dependencies are present in Arch distros
+  pacman:
+    name: "{{ item }}"
+    state: present
+  become: true
+  with_items:
+    - grep
+    - tar
+    - which
+    - zsh
+  when: ansible_os_family == 'Archlinux'
+
+- name: Download antibody install script
+  get_url:
+    url: https://raw.githubusercontent.com/getantibody/installer/master/install
+    dest: /tmp/antibody-install.sh
+
+- name: Install antibody
+  command: bash /tmp/antibody-install.sh
+  args:
+    creates: /usr/local/bin/antibody
+
+- name: Clone zsh repo via vcsh
+  command: vcsh clone -b {{ zsh_repo_branch }} git@bitbucket.org:fongshway/config-zsh.git zsh
+  args:
+    creates: ~/.config/vcsh/repo.d/zsh.git
+  become: true
+  become_user: "{{ zsh_username }}"
+
+- name: Run antibody bundle command
+  shell: antibody bundle < ~/.zsh_plugins
+  args:
+    creates: "{{ zsh_antibody_home }}"
+  become: true
+  become_user: "{{ zsh_username }}"

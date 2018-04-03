@@ -1,0 +1,4 @@
+---
+zsh_antibody_home: ~/.cache/antibody
+zsh_repo_branch: master
+zsh_username: user

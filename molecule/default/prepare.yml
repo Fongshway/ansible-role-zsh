@@ -1,0 +1,7 @@
+---
+- name: Prepare
+  hosts: all
+  gather_facts: true
+  roles:
+    - {role: fongshway.ssh_user}
+    - {role: fongshway.ssh_deploy}

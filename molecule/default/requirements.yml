@@ -1,0 +1,9 @@
+---
+- src: https://github.com/Fongshway/ansible-role-vcsh.git
+  name: fongshway.vcsh
+
+- src: https://github.com/Fongshway/ansible-role-ssh-user.git
+  name: fongshway.ssh_user
+
+- src: https://github.com/Fongshway/ansible-role-ssh-deploy.git
+  name: fongshway.ssh_deploy
