@@ -6,6 +6,7 @@
   become: true
   with_items:
     - grep
+    - procps  # Dep for ssh-agent.plugin.zsh
     - tar
     - which
     - zsh
