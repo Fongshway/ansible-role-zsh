@@ -35,3 +35,9 @@
     creates: "{{ zsh_antibody_home }}"
   become: true
   become_user: "{{ zsh_username }}"
+
+- name: Set zsh as default shell
+  user:
+    name: "{{ zsh_username }}"
+    shell: /bin/zsh
+  become: true
