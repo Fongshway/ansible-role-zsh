@@ -3,7 +3,7 @@ galaxy_info:
   author: Kevin Fong
   description: Install zsh and antibody
   company: your company (optional)
-  version: 0.0.0
+  version: 0.1.0
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
