@@ -22,17 +22,11 @@
   args:
     creates: /usr/local/bin/antibody
 
-- name: Clone zsh repo via vcsh
-  command: vcsh clone -b {{ zsh_repo_branch }} git@bitbucket.org:fongshway/config-zsh.git zsh
-  args:
-    creates: ~/.config/vcsh/repo.d/zsh.git
-  become: true
-  become_user: "{{ zsh_username }}"
-
-- name: Run antibody bundle command
-  shell: antibody bundle < ~/.zsh_plugins
-  args:
-    creates: "{{ zsh_antibody_home }}"
+- name: create a default .zshrc
+  template:
+    src: .zshrc.j2
+    dest: ~/.zshrc
+    backup: true
   become: true
   become_user: "{{ zsh_username }}"
 

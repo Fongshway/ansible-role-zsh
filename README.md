@@ -1,7 +1,15 @@
-Role Name
+ansible-role-zsh
 =========
 
 A brief description of the role goes here.
+
+Build Status
+------------
+
+| Branch        | Status        |
+| ------------- |:-------------:|
+| master        | [![Build Status](https://travis-ci.org/Fongshway/ansible-role-zsh.svg?branch=master)](https://travis-ci.org/Fongshway/ansible-role-zsh) |
+| develop       | [![Build Status](https://travis-ci.org/Fongshway/ansible-role-zsh.svg?branch=develop)](https://travis-ci.org/Fongshway/ansible-role-zsh) |
 
 Requirements
 ------------

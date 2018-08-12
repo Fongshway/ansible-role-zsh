@@ -18,5 +18,5 @@ def test_zshrc_file(host):
     assert host.file("/home/user/.zshrc").exists
 
 
-def test_anitbody_home(host):
-    assert host.file("/home/user/.cache/antibody").exists
+def test_user_shell(host):
+    assert host.user("user").shell == "/bin/zsh"
