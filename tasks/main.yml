@@ -26,7 +26,7 @@
   template:
     src: .zshrc.j2
     dest: ~/.zshrc
-    backup: true
+    force: false
   become: true
   become_user: "{{ zsh_username }}"
 
