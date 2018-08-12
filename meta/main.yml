@@ -1,7 +1,7 @@
 ---
 galaxy_info:
-  author: your name
-  description: your description
+  author: Kevin Fong
+  description: Install zsh and antibody
   company: your company (optional)
   version: 0.0.0
 
